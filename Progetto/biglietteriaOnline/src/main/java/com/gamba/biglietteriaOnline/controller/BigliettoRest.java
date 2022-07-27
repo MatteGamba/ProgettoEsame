@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @RestController
@@ -45,6 +46,7 @@ public class BigliettoRest {
     }
 
     @DeleteMapping("/delete/{codOperazione}")
+    @Transactional
     public ResponseEntity<Biglietto> deleteTicket(@PathVariable int codOperazione){
         service.deleteBiglietto(codOperazione);
         return new ResponseEntity<>(HttpStatus.OK);

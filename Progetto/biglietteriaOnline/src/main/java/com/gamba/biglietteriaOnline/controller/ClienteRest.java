@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @RestController
@@ -46,6 +47,7 @@ public class ClienteRest {
     }
 
     @DeleteMapping("/delete/{codCliente}")
+    @Transactional
     public ResponseEntity<Cliente> deleteCliente(@PathVariable int codCliente){
         service.deleteCliente(codCliente);
         return new ResponseEntity<>(HttpStatus.OK);
