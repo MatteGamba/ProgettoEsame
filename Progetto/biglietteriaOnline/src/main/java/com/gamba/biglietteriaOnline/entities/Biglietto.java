@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "biglietti")
@@ -27,4 +28,12 @@ public class Biglietto {
     private String tipoPagamento;
     private int quantita;
 
+    public Biglietto(Cliente codCliente, Replica codReplica, LocalDate dataOra, String tipoPagamento, int quantita) {
+        super();
+        this.codCliente = codCliente;
+        this.codReplica = codReplica;
+        this.dataOra = dataOra;
+        this.tipoPagamento = tipoPagamento;
+        this.quantita = quantita;
+    }
 }

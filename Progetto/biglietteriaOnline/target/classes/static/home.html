@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+    <title>Home</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="http://localhost:8080/home.html">MG CINEMA</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="http://localhost:8080/home.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:8080/spettacoli.html">Spettacoli</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:8080/prenotazioni.html">Acquista Biglietto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:8080/biglietti.html">Prenotazioni</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:8080/index.html">Esci</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+     
+  <div class="py-5 bg-light">
+    <h1 class="text-center my-0">MG CINEMA</h1>
+    <p class="text-center my-0">Riscopri il divertimento</p>
+  </div>  
+  
+  <img src="Foto_Sala_Roma.jpg" class="img-fluid" alt="Responsive image">
+
+      <footer class="text-center text-light border-top bg-dark py-3">
+        <div class="inner">
+          <p class="m-0">Presented By Matteo Gamba</p>
+        </div>
+      </footer>
+        
+    <script>
+        const btnSpettacoli = document.getElementById("btnSpettacoli");
+        const btnPrenotazioni = document.getElementById("btnPrenotazioni");
+        const btnUtente = document.getElementById("btnUtente");
+
+       /* btnSpettacoli.addEventListener("click", function () {
+            window.location.href = "http://localhost:8080/spettacoli.html";
+                    });
+       */
+
+        btnPrenotazioni.addEventListener("click", function () {
+            window.location.href = "http://localhost:8080/prenotazioni.html";
+                    });
+
+        btnUtente.addEventListener("click", function () {
+            window.location.href = "http://localhost:8080/utente.html";
+                    });
+        
+
+    </script>
+
+
+</body>
+</html>
